@@ -1,36 +1,34 @@
-demo-base
+demo-joc
 =========
 
-This repo is a base image to be used as storage for a Jenkins demo.
+This repo is a complex JOC demo w/HA, client masters, and shared slaves.
 
 Usage
 -----
 
 ```
-docker run -d --name storage apemberton/jenkins-storage git clone https://github.com/apemberton/demo-base.git .
-docker run -d --name jenkins --volumes-from storage -p 80:8080 -e JENKINS_HOME=/data/var/lib/jenkins apemberton/jenkins-enterprise
-```
+// create storage
+docker run -d --name storage apemberton/jenkins-storage
 
-Optional
---------
+// start skydns and skydock
+docker run -d -p 172.17.42.1:53:53/udp --name skydns crosbymichael/skydns -nameserver 8.8.8.8:53 -domain beedemo.io
+docker run -d -v /var/run/docker.sock:/docker.sock --name skydock crosbymichael/skydock -ttl 30 -environment dev -s /docker.sock -domain beedemo.io -name skydns
 
-If you'd like to save off your own demo, there are just a few steps:
+// start joc ha cluster
+docker run -d --dns=172.17.42.1 --name joc-1 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/joc apemberton/jenkins-operations-center --prefix=""
+docker run -d --dns=172.17.42.1 --name joc-2 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/joc apemberton/jenkins-operations-center --prefix=""
 
-1. Expose the storage volume so it's viewable from OS X via Samba
+// start haproxy and joc haproxy monitor
+docker run -d --dns=172.17.42.1 --name proxy -p 80:80 --volumes-from storage apemberton/demo-joc-haproxy -j /data/var/lib/jenkins/joc -p '' joc-1.jenkins-operations-center.dev.beedemo.io:8080 joc-2.jenkins-operations-center.dev.beedemo.io:8080
 
-```
+// add an example master ha cluster
+docker run -d --dns=172.17.42.1 --name api-team-1 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/api-team apemberton/jenkins-enterprise --prefix="/api-team"
+docker run -d --dns=172.17.42.1 --name api-team-2 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/api-team apemberton/jenkins-enterprise --prefix="/api-team"
+
+// add a few slaves
+docker run -d --dns=172.17.42.1 --name slave-1 apemberton/jenkins-slave
+docker run -d --dns=172.17.42.1 --name slave-2 apemberton/jenkins-slave
+
+// 
 docker run --rm -v /usr/local/bin/docker:/docker -v /var/run/docker.sock:/docker.sock svendowideit/samba storage
-```
-
-2. Mount the storage volume
-
-Instructions are here: https://github.com/boot2docker/boot2docker but essentially open cifs://192.168.59.103/
-
-3. Commit your changes
-
-```
-git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
-git add -A
-git commit -m "committing my demo"
-git push
 ```
