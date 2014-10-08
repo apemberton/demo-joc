@@ -8,7 +8,7 @@ Usage
 
 ```
 // create storage
-docker run -d --name storage apemberton/jenkins-storage
+docker run -d --name storage apemberton/jenkins-storage git clone https://github.com/apemberton/demo-joc.git .
 
 // start skydns and skydock
 docker run -d -p 172.17.42.1:53:53/udp --name skydns crosbymichael/skydns -nameserver 8.8.8.8:53 -domain beedemo.io
