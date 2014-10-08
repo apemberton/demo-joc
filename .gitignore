@@ -1,0 +1,91 @@
+# OSX.gitignore
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# The following ignores...
+# Miscellaneous Hudson litter
+*.log
+*.tmp
+*.old
+*.bak
+*.jar
+*.json
+
+# Linux user files
+.Xauthority
+.bash_history
+.bash_profile
+.fontconfig
+.gitconfig
+.gem
+.lesshst
+.mysql_history
+.owner
+.ri
+.rvm
+.ssh
+.viminfo
+.vnc
+bin/
+
+# Generated Hudson state
+**/.owner
+**/secret.key
+**/queue.xml
+**/fingerprints/
+**/shelvedProjects/
+**/updates/
+**/jobs/*/workspace/
+**/plugins/*.bak
+**/updates/default.json
+**/war/
+*.bak
+
+# Tools that Hudson manages
+/tools/
+
+# Extracted plugins
+**/plugins/*
+
+# Job state
+
+**/workspace/
+**/lastStable
+**/lastSuccessful
+**/nextBuildNumber
+**/modules/
+
+# Project specific stuff
+**/custom_deps/
+**/slave/workspace/
+**/slave-slave.log.*
+
+# JEBC
+**/jgroups/*
+**/monitoring/*
+*~
+**/wars/jenkins*.war
+*.log
+*.zip
+*.rrd
+*.gz
+
