@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.opscenter.server.model.SharedSlave plugin="operations-center-server@1.5.1">
+  <actions/>
+  <description></description>
+  <uid>fa001a65-b30c-4b1b-82a9-f64957de8706</uid>
+  <disabled>false</disabled>
+  <properties class="com.cloudbees.opscenter.server.model.SharedSlave$PropertyList"/>
+  <remoteFS>/var/lib/jenkins</remoteFS>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <labelString>docker debian</labelString>
+  <retentionStrategy class="com.cloudbees.opscenter.server.model.SharedNodeRetentionStrategy">
+    <idleMinutes>1</idleMinutes>
+  </retentionStrategy>
+  <nodeProperties class="empty-list"/>
+  <launcher class="com.cloudbees.jenkins.plugins.sshslaves.SSHLauncher" plugin="cloudbees-ssh-slaves@1.1">
+    <host>slave-2.jenkins-slave.dev.beedemo.io</host>
+    <connectionDetails>
+      <credentialsId>7b8e09c6-a46d-4b13-bcfe-28498c38112d</credentialsId>
+      <port>22</port>
+      <javaPath></javaPath>
+      <jvmOptions></jvmOptions>
+      <prefixStartSlaveCmd></prefixStartSlaveCmd>
+      <suffixStartSlaveCmd></suffixStartSlaveCmd>
+      <displayEnvironment>false</displayEnvironment>
+    </connectionDetails>
+  </launcher>
+</com.cloudbees.opscenter.server.model.SharedSlave>

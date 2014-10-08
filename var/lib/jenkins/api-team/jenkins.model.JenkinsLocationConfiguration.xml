@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.model.JenkinsLocationConfiguration>
+  <jenkinsUrl>http://proxy.demo-joc-haproxy.dev.beedemo.io/api-team/</jenkinsUrl>
+</jenkins.model.JenkinsLocationConfiguration>

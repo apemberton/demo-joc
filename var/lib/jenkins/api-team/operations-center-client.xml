@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.opscenter.client.plugin.PluginImpl plugin="operations-center-client@1.5.1">
+  <context class="com.cloudbees.opscenter.context.ItemRemoteContext" serialization="custom">
+    <com.cloudbees.opscenter.context.RemoteContext>
+      <default>
+        <instanceBag class="tree-map">
+          <comparator class="com.cloudbees.opscenter.context.RemoteContext$ByClassName" plugin="operations-center-context@1.5"/>
+          <entry>
+            <java-class>com.cloudbees.opscenter.context.ConnectionDetails</java-class>
+            <com.cloudbees.opscenter.utils.SerializableWrapper serialization="custom">
+              <com.cloudbees.opscenter.utils.SerializableWrapper>
+                <default>
+                  <class>com.cloudbees.opscenter.context.ConnectionDetails</class>
+                  <xml>&lt;com.cloudbees.opscenter.context.ConnectionDetails plugin=&quot;operations-center-context@1.5&quot;&gt;
+  &lt;url&gt;http://proxy.demo-joc-haproxy.dev.beedemo.io/&lt;/url&gt;
+  &lt;id&gt;0-api-team&lt;/id&gt;
+  &lt;grant&gt;2c124321-e76d-4178-bebe-cfe5f5856970&lt;/grant&gt;
+&lt;/com.cloudbees.opscenter.context.ConnectionDetails&gt;</xml>
+                </default>
+              </com.cloudbees.opscenter.utils.SerializableWrapper>
+            </com.cloudbees.opscenter.utils.SerializableWrapper>
+          </entry>
+          <entry>
+            <java-class>jenkins.metrics.api.MetricsAccessKey$Provider</java-class>
+            <com.cloudbees.opscenter.utils.SerializableWrapper serialization="custom">
+              <com.cloudbees.opscenter.utils.SerializableWrapper>
+                <default>
+                  <class>jenkins.metrics.api.MetricsAccessKey$FixedListProviderImpl</class>
+                  <xml>&lt;jenkins.metrics.api.MetricsAccessKey_-FixedListProviderImpl plugin=&quot;metrics@3.0.5&quot;&gt;
+  &lt;accessKeys&gt;
+    &lt;jenkins.metrics.api.MetricsAccessKey&gt;
+      &lt;key&gt;OvPlLZh1EVas9tU7qHvtFOUTS38UNb3qW2EnGrWdEIk2t_vmW9XmmTKlA2yAeAN6_1OS5pce_6Zy9MdQ3TRlhhya_fzWdC_fpP_QfGzf7zNMdOjmQ9yaIyqOG2TRJ4f-vBHYpRsIhyXnSXVZ8f4AyDcnai49XR8Rrdj-Z9Q2xEFclVRymJJmUr5mHqL8rbOEKd9H4wG5NBTzEGJEmoWt5MaHPt8-6TWhU2X0AfHGTXTaWgtvd-BgLysrcYyoysqlo5OY3C5L1-k4HtZqWI65P5yv3rxYn1cG1WJpdJod3wiI-_vSLMuQFpNHzbRheU0bYb1qRsqDBrME__XWXjnH_w&lt;/key&gt;
+      &lt;canPing&gt;false&lt;/canPing&gt;
+      &lt;canThreadDump&gt;false&lt;/canThreadDump&gt;
+      &lt;canHealthCheck&gt;false&lt;/canHealthCheck&gt;
+      &lt;canMetrics&gt;true&lt;/canMetrics&gt;
+    &lt;/jenkins.metrics.api.MetricsAccessKey&gt;
+    &lt;jenkins.metrics.api.MetricsAccessKey&gt;
+      &lt;key&gt;YUFk6EMwF2RZowOF7PJtQjHPPr5omNpjI9ifYHxhLkQ2vGxJ3SLHyMV_l2fQxRXZSEKfMD2feCIYYojk9Rx2kRs7pkBMc85idyEpBSTRnZzJYM9nt3OKuYth0Ykcclp0i0V0cf8NrdIUPC04Dx6E3WCm9kbnHib4D7T-YvUtc2gf_DDXsnGEY6venI-XMusjg4e4AXX5beX5MoxFl14z1IW39XfN0MZyfyhaMgHJyL6JsnETUrnxKxLKPto4GqTM4z3xQXMXojxi-PjKaLzwb4y92Y2KolliHy42yvlE8DoRjrunEpkF01r3Rr60vxqzyhtV9MP2fWRw1pL7BPy8uQ&lt;/key&gt;
+      &lt;canPing&gt;false&lt;/canPing&gt;
+      &lt;canThreadDump&gt;false&lt;/canThreadDump&gt;
+      &lt;canHealthCheck&gt;false&lt;/canHealthCheck&gt;
+      &lt;canMetrics&gt;true&lt;/canMetrics&gt;
+    &lt;/jenkins.metrics.api.MetricsAccessKey&gt;
+    &lt;jenkins.metrics.api.MetricsAccessKey&gt;
+      &lt;key&gt;MBp2l3OC2Uut1Wrm53UnIAD2gvFjdvrVydFk2TMExOpiRQctq22xRqazfqpRO1Ebf6DuXcj9bsnu6ePrbqwGwnVTjGW-5Oc1inE-kZWDQ5zsDBg73EYZ5fjEplX2rK_tYalO_x60hKkaMVTcSESH7ZO_i6CJIG5sBFXVQttSrYRt7wgipmNm9tA61qOidJj0a5eqEJzu3JS_x45ggply7zwBTYLT3Q1eT0bLRDTw8NT_le0ayE6RtCKRVaUinkQ0yst6CcjlEh7E0ueEX-dLjNuXUd89jZ9XIFaeVm-cz1kw9X_YcPvig5wiTmtmoCmBAHPl6CsvGeu6fWQ4u7A11Q&lt;/key&gt;
+      &lt;canPing&gt;false&lt;/canPing&gt;
+      &lt;canThreadDump&gt;false&lt;/canThreadDump&gt;
+      &lt;canHealthCheck&gt;false&lt;/canHealthCheck&gt;
+      &lt;canMetrics&gt;true&lt;/canMetrics&gt;
+    &lt;/jenkins.metrics.api.MetricsAccessKey&gt;
+  &lt;/accessKeys&gt;
+&lt;/jenkins.metrics.api.MetricsAccessKey_-FixedListProviderImpl&gt;</xml>
+                </default>
+              </com.cloudbees.opscenter.utils.SerializableWrapper>
+            </com.cloudbees.opscenter.utils.SerializableWrapper>
+          </entry>
+        </instanceBag>
+      </default>
+    </com.cloudbees.opscenter.context.RemoteContext>
+    <com.cloudbees.opscenter.context.ItemRemoteContext>
+      <default>
+        <breadcrumbs class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+          <c class="list">
+            <com.cloudbees.opscenter.context.BreadcrumbImpl plugin="operations-center-context@1.5">
+              <url>http://proxy.demo-joc-haproxy.dev.beedemo.io/</url>
+              <displayName>Jenkins</displayName>
+            </com.cloudbees.opscenter.context.BreadcrumbImpl>
+          </c>
+          <list reference="../c"/>
+        </breadcrumbs>
+        <displayName>api-team</displayName>
+        <objectUrl>http://proxy.demo-joc-haproxy.dev.beedemo.io/job/api-team/</objectUrl>
+      </default>
+    </com.cloudbees.opscenter.context.ItemRemoteContext>
+  </context>
+</com.cloudbees.opscenter.client.plugin.PluginImpl>
