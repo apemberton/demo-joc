@@ -25,10 +25,6 @@ docker run -d --dns=172.17.42.1 --name proxy -p 80:80 --volumes-from storage ape
 docker run -d --dns=172.17.42.1 --name api-team-1 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/api-team apemberton/jenkins-enterprise --prefix="/api-team"
 docker run -d --dns=172.17.42.1 --name api-team-2 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/api-team apemberton/jenkins-enterprise --prefix="/api-team"
 
-// add a few slaves
+// add slaves
 docker run -d --dns=172.17.42.1 --name slave-1 apemberton/jenkins-slave
 docker run -d --dns=172.17.42.1 --name slave-2 apemberton/jenkins-slave
-
-// 
-docker run --rm -v /usr/local/bin/docker:/docker -v /var/run/docker.sock:/docker.sock svendowideit/samba storage
-```
