@@ -9,7 +9,7 @@ Usage
 #### create storage
 
 ```
-docker run -d --name storage apemberton/jenkins-storage git clone https://github.com/apemberton/demo-joc.git .
+docker run -d --name storage apemberton/jenkins-storage git clone https://github.com/apemberton/demo-base.git .
 ```
 
 #### start skydns and skydock
